@@ -7,9 +7,9 @@ const PuppyList = () => {
     const fetchPuppies = async () => {
       try {
         const response = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2308-acc-et-web-pt-b/players');
-        const data = await response.json();
-        console.log(data); 
-        setPuppies(data);
+        const { data } = await response.json();
+        console.log(data.players); // Make sure we are accessing the players array
+        setPuppies(data.players); // Adjust this line
       } catch (error) {
         console.error('Failed to fetch puppies:', error);
       }
@@ -27,8 +27,8 @@ const PuppyList = () => {
             <li key={puppy.id}>
               <h2>{puppy.name}</h2>
               <p>Breed: {puppy.breed}</p>
-              <p>Age: {puppy.age}</p>
-              
+              {/* Adding an image for each puppy */}
+              <img src={puppy.imageUrl} alt={puppy.name} style={{ width: '100px', height: '100px' }} />
             </li>
           ))}
         </ul>
