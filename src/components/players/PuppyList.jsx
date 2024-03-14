@@ -8,8 +8,8 @@ const PuppyList = () => {
       try {
         const response = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2308-acc-et-web-pt-b/players');
         const { data } = await response.json();
-        console.log(data.players); // Make sure we are accessing the players array
-        setPuppies(data.players); // Adjust this line
+        console.log(data.players); 
+        setPuppies(data.players); 
       } catch (error) {
         console.error('Failed to fetch puppies:', error);
       }
