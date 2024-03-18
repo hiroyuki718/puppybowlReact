@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const PuppyList = () => {
   const [puppies, setPuppies] = useState([]);
@@ -25,7 +26,9 @@ const PuppyList = () => {
         <ul>
           {puppies.map((puppy) => (
             <li key={puppy.id}>
-              <h2>{puppy.name}</h2>
+        <Link to={`/player/${puppy.id}`}>
+          {puppy.name}
+        </Link>
               <p>Breed: {puppy.breed}</p>
               {/* Adding an image for each puppy */}
               <img src={puppy.imageUrl} alt={puppy.name} style={{ width: '100px', height: '100px' }} />
