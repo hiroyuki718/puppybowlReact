@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PlayerDetails from './PlayerDetails';
 
 const PuppyList = () => {
   const [puppies, setPuppies] = useState([]);
@@ -26,7 +27,7 @@ const PuppyList = () => {
         <ul>
           {puppies.map((puppy) => (
             <li key={puppy.id}>
-        <Link to={`/player/${puppy.id}`}>
+        <Link to={`/players/${puppy.id}`}>
           {puppy.name}
         </Link>
               <p>Breed: {puppy.breed}</p>

@@ -33,7 +33,7 @@ function App() {
       <div>
         <Header />
         <Routes>
-          <Route path="/" element={<PuppyList puppies={puppies} removePuppy={removePuppy} />} />
+          <Route path="/home" element={<PuppyList puppies={puppies} removePuppy={removePuppy} />} />
           <Route path="/create" element={<CreatePlayerForm addPuppy={addPuppy} />} />
           {/* Define more routes as needed */}
         </Routes>
