@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import PlayerDetails from './PlayerDetails';
+
 
 const PuppyList = () => {
   const [puppies, setPuppies] = useState([]);

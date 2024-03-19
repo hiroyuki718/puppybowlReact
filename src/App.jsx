@@ -6,6 +6,7 @@ import PuppyList from './components/players/PuppyList';
 import CreatePlayerForm from './components/players/CreatePlayerForm';
 
 
+
 function App() {
   const [puppies, setPuppies] = useState([]);
 
@@ -33,7 +34,7 @@ function App() {
       <div>
         <Header />
         <Routes>
-          <Route path="/home" element={<PuppyList puppies={puppies} removePuppy={removePuppy} />} />
+          <Route path="/" element={<PuppyList puppies={puppies} removePuppy={removePuppy} />} />
           <Route path="/create" element={<CreatePlayerForm addPuppy={addPuppy} />} />
           {/* Define more routes as needed */}
         </Routes>
